@@ -26,9 +26,27 @@ The website's scroll control is a separate coding step. It does not require Higg
 
 ## Use a skill
 
-Download a skill folder and add it to your assistant's supported skills directory. For a Codex setup using the standard user directory, the two folders go under `~/.codex/skills/`. Keep each `SKILL.md` and its `agents/` folder together. Reload skill discovery or start a new session if the assistant does not see it yet. Other assistants have their own installation locations; these Markdown instructions can also be supplied directly.
+These workflows can be used with **Claude or Codex**. The core instructions are in `SKILL.md`; the `agents/openai.yaml` files provide Codex UI metadata. Tool access determines which steps an assistant can carry out automatically.
 
-Example requests:
+### Claude Code
+
+Copy each folder from this repository's `skills/` directory into `~/.claude/skills/` for personal use, or `.claude/skills/` inside your website project. For example, the final path should be `~/.claude/skills/seamless-video-entrance/SKILL.md`.
+
+Invoke it with `/seamless-video-entrance` or `/scroll-video-website`, followed by your request. See [Claude Code's official skills documentation](https://code.claude.com/docs/en/skills).
+
+### Claude app
+
+Download the repository, then ZIP **one skill folder at a time** from inside `skills/`. Each ZIP should contain that named folder with its `SKILL.md` directly inside it. The whole repository ZIP is not a single installable Claude skill.
+
+Enable code execution and file creation, then go to **Customize > Skills > + > Create skill > Upload a skill** and upload each ZIP. Enable the skill and ask Claude to use it. Availability can depend on your organisation's settings. See [Claude's official upload guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
+
+Claude still needs access to the website files and the necessary generation, media and browser tools. If a tool is unavailable, use the manual handoff described above. A chat upload does not automatically grant access to your computer or video service.
+
+### Codex
+
+Copy each skill folder into `~/.codex/skills/`. Keep `SKILL.md` and its `agents/` folder together. Reload skill discovery or start a new session if the assistant does not see it yet.
+
+Codex example requests:
 
 - `Use $seamless-video-entrance to turn this image into a short entrance. First check which video tools you can access. If none are connected, prepare the prompt and references for me to generate the clip in my own app.`
 - `Use $seamless-video-entrance to make the approved clip join seamlessly to this website. Preserve its glass, lighting and camera movement.`
@@ -49,6 +67,8 @@ The exact timeline distances, crop, colours, objects and model are project input
 ## Status and scope
 
 The techniques were exercised on the original portfolio in desktop and phone browser layouts. These packaged instructions have passed structural validation and a scenario walkthrough; they have not yet been tested by rebuilding a separate site from scratch. Physical iPhone Safari and constrained-network performance still need project-specific testing.
+
+Claude installation instructions have been checked against its official documentation. A fresh end-to-end run of these packaged skills in Claude has not yet been tested.
 
 The repository contains the workflows only. Source photographs, generated clips, reference images, private project notes and paid-service job data are not included. No third-party skill implementation has been copied into the package.
 
