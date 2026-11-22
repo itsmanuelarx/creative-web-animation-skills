@@ -1,11 +1,11 @@
 ---
 name: seamless-video-entrance
-description: Create or refine a short photographic video entrance that joins cleanly to a website's opening and final scene. Use when object identity, glass or reflections, colour continuity, camera movement or temporal repairs need to remain believable across video and still states.
+description: Create or refine a short photographic video entrance that joins cleanly to a website's opening and final scene. Use when subject identity, materials or reflections, colour continuity, camera movement or temporal repairs need to remain believable across video and still states.
 ---
 
 # Seamless video entrance
 
-Build a continuous visual entrance that settles naturally into the website. Treat the image, video, browser decoding and page composition as one visual sequence.
+Build a continuous visual entrance that settles naturally into the website. Treat the image, video, browser decoding and page composition as one visual sequence. Adapt the subject and action to the project: products, interiors, artwork or other scenes. Drink, splash and counter examples below are conditional examples, not required elements. Choose a motion the available video or animation tools can support; this workflow does not supply character rigs or a 3D scene engine.
 
 ## Recover the approved direction
 
@@ -38,19 +38,19 @@ Use the user's selected model and currently available tools. Record the model as
 
 Assign each image reference a purpose: composition, subject identity, materials, lighting or endpoint. Avoid mixing several references with incompatible geometry and asking the model to infer the priority.
 
-When start/end references are supported, anchor both endpoints. Describe the physical action and camera path separately. For example: the garnish descends, touches the liquid, creates a minimal impact response, then the camera turns and reveals the wider room. Liquid should react after contact; a visible droplet should persist or become plausibly occluded.
+When start/end references are supported, anchor both endpoints. Describe the physical action and camera path separately. Define cause and effect for the chosen action. A product turn should preserve its shape and surface details; a camera moving through a doorway should preserve room geometry. For a liquid-impact shot, the object touches the liquid before a splash appears; a visible droplet should persist or become plausibly occluded.
 
-Keep the subject, supporting surface, contact shadow and reflection moving coherently. A transparent drink needs plausible refraction and occlusion of the submerged object. Do not make an isolated glass shrink over an unrelated background when the desired effect is a physical camera move.
+Keep the subject, supporting surface, contact shadow and reflection moving coherently. Transparent materials need plausible refraction and occlusion; a submerged object is one example. When the desired effect is a physical camera move, preserve coherent foreground/background perspective instead of shrinking an isolated subject over an unrelated scene.
 
 Ask for one continuous shot and a settled ending when that is the selected direction. Avoid extra cuts, a second pullback, invented text, exposure shifts or a different object appearing at the end. Make these constraints specific to the scene rather than accumulating a generic negative-prompt list.
 
 ## Match the website to the actual film
 
-Capture the opening and settled endpoint from the exact selected video through the target browser's decoded output where possible. Use the same frames for the page poster and settled foreground. An approximately similar still can expose differences in shape, colour or garnish position.
+Capture the opening and settled endpoint from the exact selected video through the target browser's decoded output where possible. Use the same frames for the page poster and settled foreground. An approximately similar still can expose differences in shape, colour or detail placement.
 
-Compare the drink colour, glass contour, rim, garnish, counter grain, reflection and background exposure at the seams. Keep source colour metadata and avoid blind re-encoding or relabelling colour spaces. Validate the rendered browser result rather than trusting matching file metadata alone.
+Compare subject colour, contour, recognisable details, supporting-surface texture, reflections and background exposure at the seams. For a drink, also inspect the rim and garnish; for a product, inspect its silhouette and markings. Keep source colour metadata and avoid blind re-encoding or relabelling colour spaces. Validate the rendered browser result rather than trusting matching file metadata alone.
 
-If the final film has a soft background but the approved room photograph is sharp, preserve the film's complete foreground plane and blend into the approved background across a broad, suitable region. Check the join at every viewport crop. Do not outline the glass as a cutout or paint a flat patch over a textured counter to disguise a mismatch.
+If the final film has a soft background but the approved destination photograph is sharp, preserve the film's complete foreground plane and blend into that background across a broad, suitable region. Check the join at every viewport crop. Do not outline the subject as a cutout or paint a flat patch over a textured surface to disguise a mismatch.
 
 Use the same approved source across desktop and phone when that composition works, with deliberate crop and framing adjustments. Separate generated variants can drift in subject identity and colour; use them only when the composition requires them and review their continuity explicitly.
 
@@ -60,16 +60,16 @@ Inspect the defect in motion and frame sequences, not only in a still. Decide wh
 
 A repair on a moving surface must follow that surface's perspective. Use a stable repair region in tracked surface coordinates, temporally consistent texture, smooth illumination changes and appropriate foreground occlusion. Unrelated texture sampled independently each frame can flicker even when each still looks acceptable.
 
-Keep changes local and preserve approved subject geometry, colour, camera movement and timing. Compare the opening, impact, camera move, occlusion and final hold at normal speed and in close-up. Numerical difference or stability measures can help locate problems; they do not prove perceptual realism. If a repair changes more than the requested defect, show it as a separate candidate rather than quietly replacing the approved shot.
+Keep changes local and preserve approved subject geometry, colour, camera movement and timing. Compare the opening, key action, camera move, occlusion and final hold at normal speed and in close-up. Numerical difference or stability measures can help locate problems; they do not prove perceptual realism. If a repair changes more than the requested defect, show it as a separate candidate rather than quietly replacing the approved shot.
 
 ## Prepare delivery and interaction
 
 Save the source and finished clip under distinct names, exact endpoint stills, a short manifest and a review view. Record which output was accepted, rejected or merely generated. Keep prompts and receipts available in the project's private working files, without bundling account details into a shareable workflow.
 
-Select playback control separately from camera direction. A camera turn can be timed, triggered or scroll-controlled. If scrolling must lower the object from frame zero, the website must seek the entire clip without requiring a click first. Use a separate delivery derivative if frequent seeking needs different encoding; preserve the approved master.
+Select playback control separately from camera direction. A camera turn can be timed, triggered or scroll-controlled. If scrolling must control the action from frame zero, the website must seek the entire clip without requiring a click first. Use a separate delivery derivative if frequent seeking needs different encoding; preserve the approved master.
 
 ## Verify and hand over
 
-Review first frame, impact timing, action/camera transition and final frame in the browser. Check still-to-video and video-to-still handovers, colour continuity, glass and reflection integrity, and every repaired area in motion. Repeat at desktop and phone crops. Confirm the last frame remains stable without an unintended extra zoom.
+Review the first frame, key action timing, camera transitions and final frame in the browser. Check still-to-video and video-to-still handovers, colour continuity, subject and reflection integrity, and every repaired area in motion. Repeat at desktop and phone crops. Confirm the last frame remains stable without an unintended extra zoom.
 
 Deliver a concrete preview, named approved and alternative versions, source/finished provenance, and any remaining limits. Separate successful encoding, perceptual approval and physical-device testing. Creating a local preview does not authorise publishing it.

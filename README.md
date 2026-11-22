@@ -1,17 +1,32 @@
 # Creative web animation skills
 
-Two reusable AI-agent workflows extracted from building an interactive portfolio with a cocktail entrance, a camera turn, and a photographic vinyl record that moves into a project menu.
+Reusable skills for creating cinematic website entrances and scroll-controlled visual stories from your own images or video. Use them with Claude or Codex to plan motion, preserve visual continuity and connect the sequence to a responsive website.
 
 | Skill / readable SOP | Use it for |
 | --- | --- |
 | [Seamless video entrance](skills/seamless-video-entrance/SKILL.md) | Creating and refining a short video that joins cleanly to a website's opening and final scene. |
-| [Scroll video website](skills/scroll-video-website/SKILL.md) | Making scrolling control a video from its first frame and coordinating object motion, responsive layouts and project navigation. |
+| [Scroll video website](skills/scroll-video-website/SKILL.md) | Making scrolling control a video from its first frame and coordinating object motion, responsive layouts and page content. |
+
+## What you can adapt them to
+
+Choose the subject, motion and destination for your own project:
+
+| Example | Motion idea | Relevant workflow |
+| --- | --- | --- |
+| Product launch | Rotate a shoe, bag or perfume bottle, then settle into the product page | Video entrance, optionally controlled by scroll |
+| Interior or venue | Move through a doorway or pull back to reveal a room | Video entrance and scene handover |
+| Artist portfolio | Bring an artwork forward, flip it, then place it beside its project details | Object transitions and scroll control |
+| Brand story | Scrub through a short visual sequence as the visitor scrolls, with text appearing at selected moments | Scroll video website |
+
+These are adaptation ideas, not supplied demos. The original tested example was a cocktail-and-vinyl portfolio. Its subjects, red lighting and falling motion are optional creative choices.
+
+The scope is short video entrances, scroll-controlled video and coordinated object transitions on websites. Choose generation or coded motion to suit the shot. Character rigging, complete 3D scene modelling and long-form film editing require additional tools and workflows.
 
 ## What these are
 
 These are instructions an AI coding assistant can follow, and SOPs a person can read. They are not video models, pre-rendered animations or a complete website template.
 
-They were written **after** the original build to capture the process. General frontend-design and development workflow skills supported that build; the entrance, frame handover and scroll behaviour were custom work. The generated film supplies the photographed motion; website code controls its playback or scroll position. A photographic texture and CSS transforms supply the record's apparent 3D flip.
+They were written **after** the original build to capture the process. General frontend-design and development workflow skills supported that build; the entrance, frame handover and scroll behaviour were custom work. In the original cocktail-and-vinyl example, a generated film supplies the camera movement, website code controls playback or scroll position, and a photographic texture with CSS transforms supplies the record's apparent 3D flip. Other subjects use the same separation between media, interaction and object motion.
 
 ## Can this turn an image into a video?
 
@@ -49,8 +64,9 @@ Copy each skill folder into `~/.codex/skills/`. Keep `SKILL.md` and its `agents/
 Codex example requests:
 
 - `Use $seamless-video-entrance to turn this image into a short entrance. First check which video tools you can access. If none are connected, prepare the prompt and references for me to generate the clip in my own app.`
-- `Use $seamless-video-entrance to make the approved clip join seamlessly to this website. Preserve its glass, lighting and camera movement.`
-- `Use $scroll-video-website so scrolling lowers the object from the first frame, then reveals the room and continues into the project menu.`
+- `Use $seamless-video-entrance to make this approved product-turn video settle into the product page. Preserve the product shape, materials and lighting.`
+- `Use $scroll-video-website so scrolling controls this interior walkthrough from the first frame, then reveals the booking content.`
+- `Use $scroll-video-website to bring this artwork forward, flip it and settle it beside the project details. Keep the transition reversible and usable on phones.`
 
 Supply your own project and approved media. Video generation, encoding and browser inspection require the appropriate tools in your environment. These files do not include a model subscription, credentials, paid credits or those tools.
 
