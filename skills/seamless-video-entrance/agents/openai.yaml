@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seamless Video Entrance"
+  short_description: "Match photographic video entrances to website scenes"
+  default_prompt: "Use $seamless-video-entrance to refine this approved clip and its website handover while preserving the subject, colour and camera movement."

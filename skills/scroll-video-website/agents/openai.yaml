@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scroll Video Website"
+  short_description: "Build scroll-controlled cinematic website journeys"
+  default_prompt: "Use $scroll-video-website to make scrolling control this approved video from its first frame and carry the visitor into the website content."

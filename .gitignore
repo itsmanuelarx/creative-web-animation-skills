@@ -1,0 +1,11 @@
+# Keep this distribution limited to the reviewed instructions.
+.DS_Store
+__pycache__/
+.env
+.env.*
+*.mp4
+*.mov
+*.png
+*.jpg
+*.jpeg
+*.webp
